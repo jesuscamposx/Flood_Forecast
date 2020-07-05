@@ -4,8 +4,8 @@ from django.db import models
 class Alcaldia(models.Model):
     id_alcaldia = models.AutoField(db_column='idAlcaldia', primary_key=True)
     nombre = models.CharField(max_length=45)
-    altitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
 
     class Meta:
         managed = False
@@ -16,8 +16,8 @@ class Colonia(models.Model):
     id_colonia = models.AutoField(db_column='idColonia', primary_key=True)
     nombre = models.CharField(max_length=45)
     codigo_postal = models.CharField(db_column='codigoPostal', max_length=45, blank=True, null=True)  # noqa
-    altitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     id_alcaldia = models.ForeignKey(Alcaldia, models.CASCADE, db_column='idAlcaldia')  # noqa
 
     class Meta:
@@ -28,8 +28,8 @@ class Colonia(models.Model):
 class Calle(models.Model):
     id_calle = models.AutoField(db_column='idCalle', primary_key=True)
     nombre = models.CharField(max_length=45)
-    altitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     id_colonia = models.ForeignKey('Colonia', models.CASCADE, db_column='idColonia')  # noqa
 
     class Meta:
@@ -49,13 +49,13 @@ class Condicion(models.Model):
     class Meta:
         managed = False
         db_table = 'condicion'
-        unique_together = (('fecha', 'idalcaldia'),)
+        unique_together = (('fecha', 'id_alcaldia'),)
 
 
 class Inundacion(models.Model):
     id_inundacion = models.AutoField(db_column='idInundacion', primary_key=True)  # noqa
-    fecha = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='fecha')
-    id_alcaldia = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='idAlcaldia')  # noqa
+    fecha = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='fecha', related_name='inundacion_fecha')  # noqa
+    id_alcaldia = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='inundacion_idAlcaldia') # noqa
     indicador = models.IntegerField(blank=True, null=True)
 
     class Meta:
@@ -66,8 +66,8 @@ class Inundacion(models.Model):
 class Sensor(models.Model):
     id_sensor = models.AutoField(db_column='idSensor', primary_key=True)
     activado = models.IntegerField(default=True)
-    altitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     id_calle = models.ForeignKey(Calle, models.DO_NOTHING, db_column='idCalle')
 
     class Meta:
