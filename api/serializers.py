@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from api.models import Alcaldia, Colonia, Calle, Condicion
-from api.models import Inundacion, Sensor, Medicion, Destinatario
+from api.models import Sensor, Medicion, Destinatario
 
 
 class AlcaldiaSerializer(serializers.ModelSerializer):
@@ -26,13 +26,7 @@ class CondicionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Condicion
         fields = ['fecha', 'id_alcaldia', 'precipitacion', 'temp_min',
-                  'temp_max', 'creado', 'actualizado']
-
-
-class InundacionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Inundacion
-        fields = ['id_inundacion', 'fecha', 'id_alcaldia', 'indicador']
+                  'temp_max', 'inundacion', 'creado', 'actualizado']
 
 
 class SensorSerializer(serializers.ModelSerializer):

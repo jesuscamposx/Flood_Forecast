@@ -43,6 +43,7 @@ class Condicion(models.Model):
     precipitacion = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
     temp_min = models.DecimalField(db_column='tempMin', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
     temp_max = models.DecimalField(db_column='tempMax', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
+    inundacion = models.IntegerField(blank=True, null=True)
     creado = models.DateTimeField(auto_now_add=True)
     actualizado = models.DateTimeField(blank=True, null=True)
 
@@ -51,16 +52,6 @@ class Condicion(models.Model):
         db_table = 'condicion'
         unique_together = (('fecha', 'id_alcaldia'),)
 
-
-class Inundacion(models.Model):
-    id_inundacion = models.AutoField(db_column='idInundacion', primary_key=True)  # noqa
-    fecha = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='fecha', related_name='inundacion_fecha')  # noqa
-    id_alcaldia = models.ForeignKey(Condicion, models.DO_NOTHING, db_column='inundacion_idAlcaldia') # noqa
-    indicador = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'inundacion'
 
 
 class Sensor(models.Model):
