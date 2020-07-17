@@ -27,7 +27,7 @@ SECRET_KEY = '!!j8z-=a3cn&6u-t9$!7v%1+4=iote&lv+ds6wf5!t^z)u=8@p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -152,3 +152,7 @@ logging.config.dictConfig({
         }
     }
 })
+
+
+# URLs
+CLIMA_URL = "https://api.openweathermap.org/data/2.5/onecall?exclude=hourly&appid=676a4c6b1e5e860cdfa7b5d19b4bc85d"

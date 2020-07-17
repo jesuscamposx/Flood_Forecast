@@ -1,6 +1,8 @@
 from keras.models import Sequential
 from keras.layers import Dense
+import tensorflow as tf
 import csv
+import datetime
 
 
 FILE_X_TRAIN = "./ml/files/x_train.csv"
@@ -8,6 +10,7 @@ FILE_X_TEST = "./ml/files/x_test.csv"
 FILE_Y_TRAIN = "./ml/files/y_train.csv"
 FILE_Y_TEST = "./ml/files/y_test.csv"
 FILE_MODEL = "./ml/files/model.h5"
+LOGS_FOLDER = "./ml/logs/fit/"
 
 with open(FILE_X_TRAIN, 'r', newline='') as f_x_train:
     reader = csv.reader(f_x_train)
@@ -55,8 +58,12 @@ model.add(Dense(1, activation='sigmoid'))
 model.summary()
 # compile the keras model
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])  # noqa
+
+log_dir = LOGS_FOLDER + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
+
 # fit the keras model on the dataset
-model.fit(x_train, y_train, epochs=150, batch_size=10)
+model.fit(x_train, y_train, epochs=150, batch_size=10, callbacks=[tensorboard_callback])
 # evaluate the keras model
 result = model.evaluate(x_test, y_test)
 print(model.metrics_names)

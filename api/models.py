@@ -59,7 +59,7 @@ class Sensor(models.Model):
     activado = models.IntegerField(default=True)
     latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
     longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    id_calle = models.ForeignKey(Calle, models.DO_NOTHING, db_column='idCalle')
+    calle = models.ForeignKey(Calle, models.DO_NOTHING, db_column='idCalle')
 
     class Meta:
         managed = False
@@ -70,7 +70,7 @@ class Medicion(models.Model):
     id_medicion = models.AutoField(db_column='idMedicion', primary_key=True)
     creado = models.DateTimeField(auto_now_add=True)
     nivel_agua = models.DecimalField(db_column='nivelAgua', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
-    id_sensor = models.ForeignKey('Sensor', models.DO_NOTHING, db_column='idSensor')  # noqa
+    sensor = models.ForeignKey('Sensor', models.DO_NOTHING, db_column='idSensor')  # noqa
 
     class Meta:
         managed = False

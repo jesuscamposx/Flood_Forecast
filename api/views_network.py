@@ -46,8 +46,25 @@ class MedicionView(APIView):
         
 
     def post(self, request, format=None):
-        serializer = SensorSerializer(data=request.data, many=True)
+        serializer = MedicionSerializer(data=request.data, many=True)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UltMedicionView(APIView):
+    def get(self, request, format=None):
+        sensor_id = self.request.query_params.get('sensor', None)
+        if sensor_id is None:
+            return Response({"id": 40001, "text": "Sensor Id es necesario."},
+                            status=status.HTTP_400_BAD_REQUEST)
+        try:
+            q = "SELECT * FROM medicion WHERE idSensor = " + sensor_id +" AND creado = "
+            q += "(SELECT MAX(creado) FROM medicion WHERE idSensor = " + sensor_id + ")"
+            print(q)
+            meds = Medicion.objects.raw(q)
+            serializer = MedicionSerializer(meds, many=True)
+            return Response(serializer.data[0])
+        except Exception:
+            return Response({"id": 40401, "text": "No se encontraron registros"},
+                            status=status.HTTP_404_NOT_FOUND)
