@@ -1,5 +1,5 @@
-from api.models import Condicion
-from api.serializers import CondicionSerializer
+from api.models import Condicion, Calle, Colonia
+from api.serializers import CondicionSerializer, CalleSerializer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.serializers import ValidationError
@@ -15,12 +15,12 @@ logger = logging.getLogger(__name__)
 
 class CargaCondicionView(APIView):
     def get(self, request, format=None):
-        f = open('./data/9043.txt', 'r')
+        f = open('./data/files/9043.txt', 'r')
         txt = f.read()
         txt = txt.split('\n')
-        txt = txt[19:-2]
+        txt = txt[20054:-2]
 
-        f_s = open('./data/SJADF.txt', 'r')
+        f_s = open('./data/files/SJADF.txt', 'r')
         txt_s = f_s.read()
         txt_s = txt_s.split('\n')
         txt_s = txt_s[376:-1]
@@ -39,7 +39,7 @@ class CargaCondicionView(APIView):
         for row in datos:
             condicion = {
                 "fecha": datetime.strftime(datetime.strptime(row[0], '%d/%m/%Y'), '%Y-%m-%d'),
-                "id_alcaldia": 101,
+                "id_colonia": 1,
                 "precipitacion": None if row[1] == 'Nulo' else row[1],
                 "temp_min": None if row[4] == 'Nulo' else row[4],
                 "temp_max": None if row[3] == 'Nulo' else row[3],
@@ -49,7 +49,7 @@ class CargaCondicionView(APIView):
         for row in datos_s:
             condicion = {
                 "fecha": datetime.strftime(datetime.strptime(row[0], '%Y/%m/%d'), '%Y-%m-%d'),
-                "id_alcaldia": 101,
+                "id_colonia": 1,
                 "precipitacion": None if row[1] == 'None' else row[1],
                 "temp_min": None if row[2] == 'None' else row[2],
                 "temp_max": None if row[3] == 'None' else row[3],
@@ -92,7 +92,9 @@ class CargaInundacionView(APIView):
             if cdmx > 0 and inundacion > 0 and lluvia > 0 and gam > 0:
                 c_p += 1
                 try:
-                    condicion = Condicion.objects.get(fecha=fecha, id_alcaldia=101)
+                    condicion = Condicion.objects.get(fecha=fecha, id_colonia=2)
+                    #condicion = Condicion.objects.raw("SELECT * FROM condicion WHERE fecha="+fecha+" AND idColonia=1")
+                    #condicion = condicion[0]
                     if condicion.precipitacion >= 2:
                         c_f += 1
                         inundacion = 1
@@ -100,8 +102,9 @@ class CargaInundacionView(APIView):
                         inundacion = 0
                         logger.info("Fecha: " + fecha + " Conteo: " + str(d[1]) + " Precipitacion: " + str(condicion.precipitacion))  # noqa
                     serializer = CondicionSerializer(condicion, data={
+                        "id_condicion": condicion.id_condicion,
                         "fecha": fecha,
-                        "id_alcaldia": 101,
+                        "id_colonia": 2,
                         "inundacion": inundacion
                     })
                     if serializer.is_valid():
@@ -109,10 +112,82 @@ class CargaInundacionView(APIView):
                         i += 1
                     else:
                         logger.info(serializer.errors)
-                except Exception:
+                except Exception as e:
+                    logger.info(str(e))
                     logger.info("Not Found: " + str(fecha))
         logger.info("Registros de inundacion en la GAM procado por lluvia: " + str(c_p))
         logger.info("Registros de inundacion en 0la GAM procado por lluvia " + 
                     " y la precipitacion en los registros es mayor a cero: " + str(c_f))
         logger.info("Registros actualizados: " + str(i))
         return Response("OK", status=status.HTTP_200_OK)
+
+class CargaCallesView(APIView):
+    def get(self, request, format=None):
+        with open('./data/files/atlas-de-riesgo-inundaciones_gam_nombres.csv', 'r', encoding="utf-8") as f:
+            reader = csv.reader(f)
+            rows = []
+            for r in reader:
+                if r[23] == 'La Purísima Ticoman':
+                    colonia = 2
+                elif r[23] == 'San Juan de Aragón VI Sección':
+                    colonia = 1
+
+                if r[23] == 'La Purísima Ticoman' or r[23] == 'San Juan de Aragón VI Sección':  # noqa
+                    row = {
+                        'nombre': r[20],
+                        'latitud': r[0].split(',')[0],
+                        'longitud': r[0].split(',')[1],
+                        'intensidad': r[17],
+                        'id_maps': r[19],
+                        'colonia': colonia
+                    }
+                    rows.append(row)            
+            serializer = CalleSerializer(data=rows, many=True)
+            try:
+                logger.info("Validating data...")
+                serializer.is_valid(raise_exception=True)
+                logger.info("Saving data...")
+                serializer.save()
+            except ValidationError as ve:
+                return Response(serializer.errors,
+                                status=status.HTTP_400_BAD_REQUEST)
+            else:
+                return Response("OK", status=status.HTTP_200_OK)
+
+
+class CargaCondicionLPView(APIView):
+    def get(self, request, format=None):
+        f_s = open('./data/files/CEADF.txt', 'r')
+        txt_s = f_s.read()
+        txt_s = txt_s.split('\n')
+        txt_s = txt_s[11:-1]
+
+        datos_s = []
+        for row in txt_s:
+            datos_s.append(row.split(','))
+        f_s.close()
+
+        condiciones = []
+        logger.info('Getting data...')
+        for row in datos_s:
+            condicion = {
+                "fecha": datetime.strftime(datetime.strptime(row[0], '%Y/%m/%d'), '%Y-%m-%d'),
+                "id_colonia": 2,
+                "precipitacion": None if row[1] == 'None' else row[1],
+                "temp_min": None if row[2] == 'None' else row[2],
+                "temp_max": None if row[3] == 'None' else row[3],
+                "inundacion": 0
+                }
+            condiciones.append(condicion)
+        serializer = CondicionSerializer(data=condiciones, many=True)
+        try:
+            logger.info("Validating data...")
+            serializer.is_valid(raise_exception=True)
+            logger.info("Saving data...")
+            serializer.save()
+        except ValidationError as ve:
+            #logger.error(str(ve))
+            return Response(serializer.errors,
+                            status=status.HTTP_400_BAD_REQUEST)
+        else:
+            return Response("OK", status=status.HTTP_200_OK)

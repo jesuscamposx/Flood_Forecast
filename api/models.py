@@ -4,8 +4,8 @@ from django.db import models
 class Alcaldia(models.Model):
     id_alcaldia = models.AutoField(db_column='idAlcaldia', primary_key=True)
     nombre = models.CharField(max_length=45)
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    latitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
 
     class Meta:
         managed = False
@@ -15,9 +15,8 @@ class Alcaldia(models.Model):
 class Colonia(models.Model):
     id_colonia = models.AutoField(db_column='idColonia', primary_key=True)
     nombre = models.CharField(max_length=45)
-    codigo_postal = models.CharField(db_column='codigoPostal', max_length=45, blank=True, null=True)  # noqa
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    latitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
     id_alcaldia = models.ForeignKey(Alcaldia, models.CASCADE, db_column='idAlcaldia')  # noqa
 
     class Meta:
@@ -27,10 +26,12 @@ class Colonia(models.Model):
 
 class Calle(models.Model):
     id_calle = models.AutoField(db_column='idCalle', primary_key=True)
-    nombre = models.CharField(max_length=45)
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    id_colonia = models.ForeignKey('Colonia', models.CASCADE, db_column='idColonia')  # noqa
+    nombre = models.CharField(max_length=120)
+    latitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
+    intensidad = models.IntegerField(blank=True, null=True)
+    id_maps = models.CharField(db_column='idMaps', max_length=50, blank=True, null=True)  # noqa
+    colonia = models.ForeignKey('Colonia', models.CASCADE, db_column='idColonia')  # noqa
 
     class Meta:
         managed = False
@@ -38,8 +39,9 @@ class Calle(models.Model):
 
 
 class Condicion(models.Model):
-    fecha = models.DateField(primary_key=True)
-    id_alcaldia = models.ForeignKey(Alcaldia, models.DO_NOTHING, db_column='idAlcaldia')  # noqa
+    id_condicion = models.AutoField(db_column='idCondicion', primary_key=True)
+    fecha = models.DateField()
+    id_colonia = models.ForeignKey(Colonia, models.DO_NOTHING, db_column='idColonia')
     precipitacion = models.DecimalField(max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
     temp_min = models.DecimalField(db_column='tempMin', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
     temp_max = models.DecimalField(db_column='tempMax', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
@@ -50,15 +52,15 @@ class Condicion(models.Model):
     class Meta:
         managed = False
         db_table = 'condicion'
-        unique_together = (('fecha', 'id_alcaldia'),)
+        unique_together = (('fecha', 'id_colonia'),)
 
 
 
 class Sensor(models.Model):
     id_sensor = models.AutoField(db_column='idSensor', primary_key=True)
     activado = models.IntegerField(default=True)
-    latitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
-    longitud = models.DecimalField(max_digits=9, decimal_places=6, blank=True, null=True)  # noqa
+    latitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
+    longitud = models.DecimalField(max_digits=15, decimal_places=12, blank=True, null=True)  # noqa
     calle = models.ForeignKey(Calle, models.DO_NOTHING, db_column='idCalle')
 
     class Meta:
@@ -70,7 +72,7 @@ class Medicion(models.Model):
     id_medicion = models.AutoField(db_column='idMedicion', primary_key=True)
     creado = models.DateTimeField(auto_now_add=True)
     nivel_agua = models.DecimalField(db_column='nivelAgua', max_digits=5, decimal_places=2, blank=True, null=True)  # noqa
-    sensor = models.ForeignKey('Sensor', models.DO_NOTHING, db_column='idSensor')  # noqa
+    id_sensor = models.ForeignKey('Sensor', models.DO_NOTHING, db_column='idSensor')  # noqa
 
     class Meta:
         managed = False

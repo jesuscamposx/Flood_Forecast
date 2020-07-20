@@ -1,11 +1,20 @@
 from keras.models import load_model
 import csv
+import sys
 
-FILE_X_TRAIN = "./ml/files/x_train.csv"
-FILE_X_TEST = "./ml/files/x_test.csv"
-FILE_Y_TRAIN = "./ml/files/y_train.csv"
-FILE_Y_TEST = "./ml/files/y_test.csv"
-FILE_MODEL = "./ml/files/model.h5"
+FILE_X_TRAIN = "./ml/files/x_train_"
+FILE_X_TEST = "./ml/files/x_test_"
+FILE_Y_TRAIN = "./ml/files/y_train_"
+FILE_Y_TEST = "./ml/files/y_test_"
+FILE_MODEL = "./ml/files/model_"
+
+colonia = sys.argv[1]
+print("Se procesará para la colona: " + colonia)
+FILE_X_TRAIN += colonia + ".csv"
+FILE_X_TEST += colonia + ".csv"
+FILE_Y_TRAIN += colonia + ".csv"
+FILE_Y_TEST += colonia + ".csv"
+FILE_MODEL += colonia + ".h5"
 
 
 with open(FILE_X_TEST, 'r', newline='') as f_x_test:
@@ -14,7 +23,7 @@ with open(FILE_X_TEST, 'r', newline='') as f_x_test:
     x_test = []
     for r in reader:
         # "Mes", "Precipitacion","Temp Min", "Temp Max"
-        x_test.append([int(r[0]), float(r[1]),
+        x_test.append([int(round(float(r[0]))), float(r[1]),
                        float(r[2]), float(r[3])])
     print(len(x_test))
     

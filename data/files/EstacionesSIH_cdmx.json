@@ -1,0 +1,176 @@
+{'Estacion': 'SGDDF', 'Nombre': 'Sierra Guadalupe, Cd. de Méx.', 'Latitud': '19.572222', 'Longitud': '-99.122222'}
+{'Estacion': 'SSCDF', 'Nombre': 'Subestación Eléctrica Santa Catarina, Cd. de Méx.', 'Latitud': '19.320833', 'Longitud': '-98.960556'}
+{'Estacion': 'CDVDF', 'Nombre': 'Ciudad Deportiva, Cd. de Méx.', 'Latitud': '19.407778', 'Longitud': '-99.1125'}
+{'Estacion': 'CMYDF', 'Nombre': 'Campamento Mecoaya, Cd. de Méx.', 'Latitud': '19.486389', 'Longitud': '-99.183333'}
+{'Estacion': 'TCMDF', 'Nombre': 'Tanque Chalmita, Cd. de Méx.', 'Latitud': '19.556111', 'Longitud': '-99.1425'}
+{'Estacion': 'CTNDF', 'Nombre': 'San Salvador Cuautenco, Cd. de Méx.', 'Latitud': '19.190278', 'Longitud': '-99.09'}
+{'Estacion': 'TRGDF', 'Nombre': 'Tarango, Cd. de Méx.', 'Latitud': '19.361944', 'Longitud': '-99.2125'}
+{'Estacion': 'SPPDF', 'Nombre': 'San Pedro Tláhuac, Cd. de Méx.', 'Latitud': '19.281389', 'Longitud': '-99.009722'}
+{'Estacion': 'CFSDF', 'Nombre': 'Caseta Forestal, Cd. de Méx.', 'Latitud': '19.155556', 'Longitud': '-99.208333'}
+{'Estacion': 'PBODF', 'Nombre': 'Planta de bombeo U.H. Ejército de Oriente, Cd. de Méx.', 'Latitud': '19.38', 'Longitud': '-99.037778'}
+{'Estacion': 'SANDF', 'Nombre': 'Santa Ana, Cd. de Méx.', 'Latitud': '19.166667', 'Longitud': '-99'}
+{'Estacion': 'TSJDF', 'Nombre': 'Tanque San Joaquín, Cd. de Méx.', 'Latitud': '19.436389', 'Longitud': '-99.228611'}
+{'Estacion': 'EZCDF', 'Nombre': 'El Zarco, Cd. de Méx.', 'Latitud': '19.295', 'Longitud': '-99.352222'}
+{'Estacion': 'PRMDF', 'Nombre': 'Planta de Tratamiento Río Magdalena, Cd. de Méx.', 'Latitud': '19.513056', 'Longitud': '-99.154444'}
+{'Estacion': 'SCADF', 'Nombre': 'Santa Cruz Acatlán, Cd. de Méx.', 'Latitud': '19.402222', 'Longitud': '-99.133333'}
+{'Estacion': 'PGNDF', 'Nombre': 'Planta Generadora 101, Cd. de Méx.', 'Latitud': '19.455833', 'Longitud': '-99.097222'}
+{'Estacion': 'MLPDF', 'Nombre': 'Milpa Alta, Cd. de Méx.', 'Latitud': '19.187222', 'Longitud': '-99.026944'}
+{'Estacion': 'PBCDF', 'Nombre': 'Planta de bombeo Churubusco Lago, Cd. de Méx.', 'Latitud': '19.433333', 'Longitud': '-99.057778'}
+{'Estacion': 'EAZDF', 'Nombre': 'Estadio Azteca, Cd. de Méx.', 'Latitud': '19.300556', 'Longitud': '-99.151944'}
+{'Estacion': 'RBTDF', 'Nombre': 'Rebombeo Bosque Tlalpan, Cd. de Méx.', 'Latitud': '19.296111', 'Longitud': '-99.194167'}       
+{'Estacion': 'GCNDF', 'Nombre': 'km 6+250 (Gran Canal), Cd. de Méx.', 'Latitud': '19.478056', 'Longitud': '-99.091667'}
+{'Estacion': 'OCSDF', 'Nombre': 'Organismo de Cuenca AVM Sur, Cd. de Méx.', 'Latitud': '19.316389', 'Longitud': '-99.096389'}   
+{'Estacion': 'MAGDF', 'Nombre': 'Monte Alegre, Cd. de Méx.', 'Latitud': '19.216667', 'Longitud': '-99.283333'}
+{'Estacion': 'PMLDF', 'Nombre': 'Planta de bombeo Municipio Libre, Cd. de Méx.', 'Latitud': '19.365278', 'Longitud': '-99.126389'}
+{'Estacion': 'TPJDF', 'Nombre': 'Topilejo, Cd. de Méx.', 'Latitud': '19.199444', 'Longitud': '-99.135833'}
+{'Estacion': 'PXTDF', 'Nombre': 'Planta Xotepingo, Cd. de Méx.', 'Latitud': '19.331944', 'Longitud': '-99.143056'}
+{'Estacion': 'DDFDF', 'Nombre': 'Gobierno del D.F., Cd. de Méx.', 'Latitud': '19.431111', 'Longitud': '-99.131389'}
+{'Estacion': 'PCHDF', 'Nombre': 'Planta Chapultepec, Cd. de Méx.', 'Latitud': '19.413056', 'Longitud': '-99.2'}
+{'Estacion': 'CMTDF', 'Nombre': 'Cien Metros, Cd. de Méx.', 'Latitud': '19.469722', 'Longitud': '-99.1375'}
+{'Estacion': 'PBTDF', 'Nombre': 'Planta de bombeo Tizoc, Cd. de Méx.', 'Latitud': '19.435556', 'Longitud': '-99.170556'}        
+{'Estacion': 'RCMDF', 'Nombre': 'Radio Comunicación, Cd. de Méx.', 'Latitud': '19.4', 'Longitud': '-99.17'}
+{'Estacion': 'PSNDF', 'Nombre': 'Planta de bombeo Nueva Santa María, Cd. de Méx.', 'Latitud': '19.468889', 'Longitud': '-99.163889'}
+{'Estacion': 'PTRDF', 'Nombre': 'Planta de Tratamiento Rosario, Cd. de Méx.', 'Latitud': '19.509167', 'Longitud': '-99.190278'} 
+{'Estacion': 'PLMDF', 'Nombre': 'Planta de bombeo López Mateos, Cd. de Méx.', 'Latitud': '19.420278', 'Longitud': '-99.068333'} 
+{'Estacion': 'PBADF', 'Nombre': 'Planta de bombeo Aculco, Cd. de Méx.', 'Latitud': '19.379167', 'Longitud': '-99.100278'}       
+{'Estacion': 'PLEDF', 'Nombre': 'Planta de Tratamiento La Estrella, Cd. de Méx.', 'Latitud': '19.336944', 'Longitud': '-99.076389'}
+{'Estacion': 'TELDF', 'Nombre': 'Tanque el Lienzo, Cd. de Méx.', 'Latitud': '19.333889', 'Longitud': '-99.246389'}
+{'Estacion': 'CYLDF', 'Nombre': 'Coyol, Cd. de Méx.', 'Latitud': '19.484167', 'Longitud': '-99.09'}
+{'Estacion': 'PSCDF', 'Nombre': 'Planta de Tratamiento Santa Catarina, Cd. de Méx.', 'Latitud': '19.299167', 'Longitud': '-99.023056'}
+{'Estacion': 'PRRDF', 'Nombre': 'Planta de Tratamiento Río Remedios, Cd. de Méx.', 'Latitud': '19.513056', 'Longitud': '-99.154444'}
+{'Estacion': 'TSLDF', 'Nombre': 'Trif. Santa Lucía, Cd. de Méx.', 'Latitud': '19.359722', 'Longitud': '-99.264444'}
+{'Estacion': 'AJSDF', 'Nombre': 'Ajusco, Cd. de Méx.', 'Latitud': '19.218611', 'Longitud': '-99.210278'}
+{'Estacion': 'HYTDF', 'Nombre': 'Huayatla, Cd. de Méx.', 'Latitud': '19.308056', 'Longitud': '-99.2625'}
+{'Estacion': 'EYQDF', 'Nombre': 'El Yaqui, Cd. de Méx.', 'Latitud': '19.3625', 'Longitud': '-99.286389'}
+{'Estacion': 'PSLDF', 'Nombre': 'Planta San Luis, Cd. de Méx.', 'Latitud': '19.233333', 'Longitud': '-99.05'}
+{'Estacion': 'PVCDF', 'Nombre': 'Planta de bombeo Villa Coapa, Cd. de Méx.', 'Latitud': '19.285833', 'Longitud': '-99.126111'}  
+{'Estacion': 'LVNDF', 'Nombre': 'La Venta, Cd. de Méx.', 'Latitud': '19.340556', 'Longitud': '-99.3'}
+{'Estacion': 'TNGDF', 'Nombre': 'Triángulo, Cd. de Méx.', 'Latitud': '19.399167', 'Longitud': '-99.211667'}
+{'Estacion': 'CEADF', 'Nombre': 'Campamento Amealco, Cd. de Méx.', 'Latitud': '19.516667', 'Longitud': '-99.1375'}
+{'Estacion': 'CTMDF', 'Nombre': 'Central Tacubaya Met., Cd. de Méx.', 'Latitud': '19.406389', 'Longitud': '-99.196111'}
+{'Estacion': 'DATDF', 'Nombre': 'Desviación Alta, Cd. de Méx.', 'Latitud': '19.3', 'Longitud': '-99.205'}
+{'Estacion': 'PBLDF', 'Nombre': 'Planta de bombeo Lindavista, Cd. de Méx.', 'Latitud': '19.486667', 'Longitud': '-99.119444'}   
+{'Estacion': 'CCUDF', 'Nombre': 'Centro Universitario, Cd. de Méx.', 'Latitud': '19.346667', 'Longitud': '-99.180556'}
+{'Estacion': 'CDMDF', 'Nombre': 'Cárcel de Mujeres, Cd. de Méx.', 'Latitud': '19.357222', 'Longitud': '-98.999444'}
+{'Estacion': 'MZTDF', 'Nombre': 'Calle Mezontepec (Abasolo), Cd. de Méx.', 'Latitud': '19.187778', 'Longitud': '-99.233056'}    
+{'Estacion': 'TSFDF', 'Nombre': 'Tanque San Francisco, Cd. de Méx.', 'Latitud': '19.316667', 'Longitud': '-99.248611'}
+{'Estacion': 'DVLDF', 'Nombre': 'Del Valle, Cd. de Méx.', 'Latitud': '19.383333', 'Longitud': '-99.15'}
+{'Estacion': 'SJADF', 'Nombre': 'San Juan de Aragón, Cd. de Méx.', 'Latitud': '19.466667', 'Longitud': '-99.066667'}
+{'Estacion': 'EMRDF', 'Nombre': 'El Moral SACM, Cd. de Méx.', 'Latitud': '19.377778', 'Longitud': '-99.066667'}
+{'Estacion': 'SBADF', 'Nombre': 'San Bartolo Ameyalco, Cd. de Méx.', 'Latitud': '19.328611', 'Longitud': '-99.275'}
+{'Estacion': 'PNTDF', 'Nombre': 'Planta Nativitas, Cd. de Méx.', 'Latitud': '19.246389', 'Longitud': '-99.090833'}
+{'Estacion': 'PCTDF', 'Nombre': 'Planta Chapultepec, Cd. de Méx.', 'Latitud': '19.41', 'Longitud': '-99.2'}
+{'Estacion': 'TPNDF', 'Nombre': 'Tanque Peñón, Cd. de Méx.', 'Latitud': '19.440833', 'Longitud': '-99.084722'}
+{'Estacion': 'TTLDF', 'Nombre': 'Tetelco, Cd. de Méx.', 'Latitud': '19.210278', 'Longitud': '-98.970833'}
+{'Estacion': 'TECDF', 'Nombre': 'Tanque el Cartero, Cd. de Méx.', 'Latitud': '19.373056', 'Longitud': '-99.272222'}
+{'Estacion': 'DTLDF', 'Nombre': 'Desierto de los Leones, Cd. de Méx.', 'Latitud': '19.313333', 'Longitud': '-99.309167'}        
+{'Estacion': 'SCMDF', 'Nombre': 'Santa Cruz Meyehualco, Cd. de Méx.', 'Latitud': '19.338333', 'Longitud': '-99.028889'}
+{'Estacion': 'MCRDF', 'Nombre': 'Marcos Carrillo, Cd. de Méx.', 'Latitud': '19.403333', 'Longitud': '-99.133889'}
+{'Estacion': 'CHLDF', 'Nombre': 'Chapultepec lago, Cd. de Méx.', 'Latitud': '19.423333', 'Longitud': '-99.183889'}
+{'Estacion': 'AEROPUERTO', 'Nombre': 'Aeropuerto, Cd. de Méx.', 'Latitud': '19.34', 'Longitud': '-99.076667'}
+{'Estacion': 'CBIOLOGIPN', 'Nombre': 'Eescuela Nacional de Ciencias Biológicas IPN, Cd. de Méx. OCAVM*', 'Latitud': '19.453333', 'Longitud': '-99.171667'}
+{'Estacion': 'GSMN', 'Nombre': 'Servicio Meteorológico Nacional, Cd. de Méx.', 'Latitud': '19.403611', 'Longitud': '-99.196111'}
+{'Estacion': 'TEZONTLE', 'Nombre': 'Tezontle, Cd. de Méx. SACM*', 'Latitud': '19.385556', 'Longitud': '-99.098889'}
+{'Estacion': 'AERDF', 'Nombre': 'Aeropuerto, Cd. de Méx. SMN*', 'Latitud': '19.34', 'Longitud': '-99.076667'}
+{'Estacion': 'CBIDF', 'Nombre': 'Escuela Nacional de Ciencias Biológicas IPN, Cd. de Méx. SMN*', 'Latitud': '19.453333', 'Longitud': '-99.171667'}
+{'Estacion': 'GSMDF', 'Nombre': 'Servicio Meteorológico, Cd. de Méx. SMN*', 'Latitud': '19.403611', 'Longitud': '-99.196111'}   
+{'Estacion': 'TEZDF', 'Nombre': 'Tezontle, Cd. de Méx. SMN*', 'Latitud': '19.385556', 'Longitud': '-99.098889'}
+{'Estacion': 'ELGUARDA', 'Nombre': 'El Guarda (El Oro), Cd. de Méx. OCAVM*', 'Latitud': '19.134444', 'Longitud': '-99.173056'}  
+{'Estacion': 'CBIIDF', 'Nombre': 'Esc. Ciencias Biológicas 2, Cd. de Méx. SMN*', 'Latitud': '19.498611', 'Longitud': '-99.145278'}
+{'Estacion': 'ECOGUARDAS', 'Nombre': 'Ecoguardas Ajusco, Cd. de Méx. SMN*', 'Latitud': '19.271389', 'Longitud': '-99.203889'}   
+{'Estacion': 'AMEALCODF', 'Nombre': 'Amealco, Cd. de Méx. SACM*', 'Latitud': '19.518333', 'Longitud': '-98.143056'}
+{'Estacion': 'TACUBAYAob', 'Nombre': 'Observatorio de Tacubaya, Cd. de Méx. SMN*', 'Latitud': '19.403611', 'Longitud': '-99.196389'}
+{'Estacion': 'PSPDF', 'Nombre': 'Pueblo San Pedro Mártir, Cd. de Méx.', 'Latitud': '19.263056', 'Longitud': '-99.171111'}       
+{'Estacion': 'TCHALMITA', 'Nombre': 'Tanque Chalmita, Cd. de Méx. SACM*', 'Latitud': '19.555833', 'Longitud': '-99.145278'}     
+{'Estacion': 'RREMEDIOS', 'Nombre': 'Río de los Remedios, Cd. de Méx.SACM*', 'Latitud': '19.515', 'Longitud': '-99.155278'}     
+{'Estacion': 'LINDAVISTA', 'Nombre': 'Lindavista, Cd. de Méx. SACM*', 'Latitud': '19.489722', 'Longitud': '-99.120833'}
+{'Estacion': 'COYOLDF', 'Nombre': 'Coyol, Cd. de Méx. SACM*', 'Latitud': '19.484722', 'Longitud': '-99.09'}
+{'Estacion': 'GEN101', 'Nombre': 'Gen. 101, Cd. de Méx. SACM*', 'Latitud': '19.458611', 'Longitud': '-99.098889'}
+{'Estacion': 'ROSARIODF', 'Nombre': 'Rosario, Cd. de Méx. SACM*', 'Latitud': '19.51', 'Longitud': '-99.190833'}
+{'Estacion': 'CMECOAYA', 'Nombre': 'Campamento Mecoaya, Cd. de Méx. SACM*', 'Latitud': '19.486944', 'Longitud': '-99.182778'}   
+{'Estacion': 'NSMARIA', 'Nombre': 'N. Santa. María, Cd. de Méx. SACM*', 'Latitud': '19.469167', 'Longitud': '-99.165278'}       
+{'Estacion': 'SANJOAQUINDF', 'Nombre': 'San Joaquín, Cd. de Méx. SACM*', 'Latitud': '19.436667', 'Longitud': '-99.228056'}
+{'Estacion': 'TIZOC', 'Nombre': 'Tizoc, Cd. de Méx. SACM*', 'Latitud': '19.439444', 'Longitud': '-99.170556'}
+{'Estacion': 'GDF', 'Nombre': 'Gobierno de la Ciudad de México, Cd. de Méx. SACM*', 'Latitud': '19.431389', 'Longitud': '-99.1325'}
+{'Estacion': 'MCARRILLO', 'Nombre': 'Marcos Carrillo Cd. de Méx. SACM*', 'Latitud': '19.403333', 'Longitud': '-99.133889'}      
+{'Estacion': 'LOPEZMATEOS', 'Nombre': 'López Mateos, Cd. de Méx. SACM*', 'Latitud': '19.420833', 'Longitud': '-99.069167'}      
+{'Estacion': 'CHAPLAGO', 'Nombre': 'Churubusco-Cd. Lago, Cd. de Méx. SACM*', 'Latitud': '19.442222', 'Longitud': '-99.047222'}  
+{'Estacion': 'TRIANGULO', 'Nombre': 'Triángulo, Cd. de Méx. SACM*', 'Latitud': '19.397222', 'Longitud': '-99.218056'}
+{'Estacion': 'SANTAFEDF', 'Nombre': 'Santa Fe, Cd. de Méx. SACM*', 'Latitud': '19.362222', 'Longitud': '-99.265278'}
+{'Estacion': 'TLIENZO', 'Nombre': 'Tanque Lienzo, Cd. de Méx. SACM*', 'Latitud': '19.337778', 'Longitud': '-99.220833'}
+{'Estacion': 'UNIVERSIDADDF', 'Nombre': 'Universidad, Cd. de Méx. SACM*', 'Latitud': '19.3475', 'Longitud': '-99.181111'}       
+{'Estacion': 'RADIOCOMDF', 'Nombre': 'Radiocomunicaciones, Cd. de Méx. SACM*', 'Latitud': '19.399167', 'Longitud': '-99.167778'}
+{'Estacion': 'MLIBRE', 'Nombre': 'Municipio Libre, Cd. de Méx. SACM*', 'Latitud': '19.365556', 'Longitud': '-99.1275'}
+{'Estacion': 'ELCARTERO', 'Nombre': 'El Cartero, Cd. de Méx. SACM*', 'Latitud': '19.373889', 'Longitud': '-99.271111'}
+{'Estacion': 'LAVENTA', 'Nombre': 'La Venta, Cd. de Méx. SACM*', 'Latitud': '19.333333', 'Longitud': '-99.310833'}
+{'Estacion': 'SANFRANCISCODF', 'Nombre': 'San Francisco, Cd. de Méx. SACM*', 'Latitud': '19.311667', 'Longitud': '-99.239167'}  
+{'Estacion': 'RIOMAGDALENA', 'Nombre': 'Río Magdalena, Cd. de Méx. SACM*', 'Latitud': '19.288611', 'Longitud': '-99.264444'}    
+{'Estacion': 'MALEGRE', 'Nombre': 'Monte Alegre, Cd. de Méx. SACM*', 'Latitud': '19.229722', 'Longitud': '-99.279722'}
+{'Estacion': 'XOTEPINGO', 'Nombre': 'Xotepingo, Cd. de Méx. SACM*', 'Latitud': '19.332778', 'Longitud': '-99.144444'}
+{'Estacion': 'ACULCO', 'Nombre': 'Aculco, Cd. de Méx. SACM*', 'Latitud': '19.379167', 'Longitud': '-99.099722'}
+{'Estacion': 'UEDEO', 'Nombre': 'Universidad de Oriente, Cd. de Méx. SACM*', 'Latitud': '19.379444', 'Longitud': '-99.036944'}  
+{'Estacion': 'CESTRELLA', 'Nombre': 'Cerro de la Estrella, Cd. de Méx. SACM*', 'Latitud': '19.336944', 'Longitud': '-99.077222'}
+{'Estacion': 'LACALDERA', 'Nombre': 'La Caldera, Cd. de Méx. SACM*', 'Latitud': '19.339167', 'Longitud': '-98.975'}
+{'Estacion': 'SCATARINADF', 'Nombre': 'Santa Catarina, Cd. de Méx. SACM*', 'Latitud': '19.301667', 'Longitud': '-99.026111'}    
+{'Estacion': 'TLAHUAC', 'Nombre': 'Tláhuac, Cd. de Méx. SACM*', 'Latitud': '19.282778', 'Longitud': '-99.079444'}
+{'Estacion': 'BTLALPAN', 'Nombre': 'Bosque de Tlalpan, Cd. de Méx. SACM*', 'Latitud': '19.292222', 'Longitud': '-99.195'}       
+{'Estacion': 'VILLACOAPA', 'Nombre': 'Villa Coapa, Cd. de Méx. SACM*', 'Latitud': '19.286667', 'Longitud': '-99.126389'}        
+{'Estacion': 'SPEDROMARTIR', 'Nombre': 'San Pedro Mártir, Cd. de Méx. SACM*', 'Latitud': '19.262778', 'Longitud': '-99.17'}     
+{'Estacion': 'AJUSCO', 'Nombre': 'Ajusco, Cd. de Méx. SACM*', 'Latitud': '19.218611', 'Longitud': '-99.210278'}
+{'Estacion': 'TOPILEJO', 'Nombre': 'Topilejo, Cd. de Méx. SACM*', 'Latitud': '19.203333', 'Longitud': '-99.130278'}
+{'Estacion': 'CFORESTAL', 'Nombre': 'Caseta Forestal, Cd. de Méx. SACM*', 'Latitud': '0', 'Longitud': '0'}
+{'Estacion': 'OFICINAGAVM', 'Nombre': 'Oficina OCAVM, Cd. de Méx. SACM*', 'Latitud': '19.318333', 'Longitud': '-99.098611'}     
+{'Estacion': 'NATIVITAS', 'Nombre': 'Nativitas, Cd. de Méx. SACM*', 'Latitud': '19.246944', 'Longitud': '-99.093889'}
+{'Estacion': 'SANLUISDF', 'Nombre': 'San Luis, Cd. de Méx. SACM*', 'Latitud': '19.259722', 'Longitud': '-99.028889'}
+{'Estacion': 'MILPAALTA', 'Nombre': 'Milpa Alta, Cd. de Méx. SACM*', 'Latitud': '19.186944', 'Longitud': '-99.027222'}
+{'Estacion': 'VASOCRISTO', 'Nombre': 'Vaso de Cristo, Cd. de Méx. SACM*', 'Latitud': '19.510833', 'Longitud': '-99.213611'}     
+{'Estacion': 'CIENMETROS', 'Nombre': 'Avenida Cien Metros, Cd. de Méx. SACM*', 'Latitud': '19.470556', 'Longitud': '-99.136667'}
+{'Estacion': 'TPENON', 'Nombre': 'Tanque Peñón, Cd. de Méx. SACM*', 'Latitud': '19.441111', 'Longitud': '-99.082222'}
+{'Estacion': 'CDEPORTIVA', 'Nombre': 'Ciudad Deportiva, Cd. de Méx. SACM*', 'Latitud': '19.408611', 'Longitud': '-99.082222'}   
+{'Estacion': 'LAQUEBRADORA', 'Nombre': 'La Quebradora, Cd. de Méx. SACM*', 'Latitud': '19.345', 'Longitud': '-99.020556'}       
+{'Estacion': 'ELYAQUI', 'Nombre': 'El Yaqui, Cd. de Méx. SACM*', 'Latitud': '19.363611', 'Longitud': '-99.286667'}
+{'Estacion': 'DDELOSLEONES', 'Nombre': 'Desierto de los Leones, Cd. de Méx. SACM*', 'Latitud': '19.313056', 'Longitud': '-99.310556'}
+{'Estacion': 'SBAMEYALCO', 'Nombre': 'San Bartolo Ameyalco, Cd. de Méx. SACM*', 'Latitud': '19.33', 'Longitud': '-99.274167'}   
+{'Estacion': 'CARCELMUJERES', 'Nombre': 'Cárcel de Mujeres, Cd. de Méx. SACM*', 'Latitud': '19.356111', 'Longitud': '-98.998056'}
+{'Estacion': 'TETELCO', 'Nombre': 'Tetelco, Cd. de Méx. SACM*', 'Latitud': '19.210833', 'Longitud': '-98.971111'}
+{'Estacion': 'HUAYATLA', 'Nombre': 'Huayatla, Cd. de Méx. SACM*', 'Latitud': '19.304722', 'Longitud': '-99.264722'}
+{'Estacion': 'SSCUAUTENCO', 'Nombre': 'San Salvador Cuauhtenco, Cd. de Méx. SACMEX*', 'Latitud': '19.190556', 'Longitud': '-99.09'}
+{'Estacion': 'SDEGUADALUPE', 'Nombre': 'Sierra de Guadalupe, Cd. de Méx. SACM*', 'Latitud': '19.571944', 'Longitud': '-99.121944'}
+{'Estacion': 'SANTAANADF', 'Nombre': 'Santa Ana, Cd. de Méx. SACM*', 'Latitud': '19.142222', 'Longitud': '-98.970833'}
+{'Estacion': 'LDEGUADALUPE', 'Nombre': 'Lago de Guadalupe, Cd. de Méx. SACM*', 'Latitud': '19.633333', 'Longitud': '-99.250833'}
+{'Estacion': 'LAGRANDE', 'Nombre': 'La Grande, Cd. de Méx. SACM*', 'Latitud': '19.578889', 'Longitud': '-98.917222'}
+{'Estacion': 'SLAMECAII', 'Nombre': 'San Luis Ameca 2, Cd. de Méx. SACM*', 'Latitud': '19.191389', 'Longitud': '-98.871389'}    
+{'Estacion': 'COATEPEC', 'Nombre': 'Coatepec, Cd. de Méx. SACM*', 'Latitud': '19.384444', 'Longitud': '-98.848333'}
+{'Estacion': 'KM27+250', 'Nombre': 'km 27+250, Cd. de Méx. SACM*', 'Latitud': '19.642222', 'Longitud': '-99.055'}
+{'Estacion': 'PCOLGANTE', 'Nombre': 'Puente Colgante, Cd. de Méx. SACM*', 'Latitud': '19.774722', 'Longitud': '-99.188611'}     
+{'Estacion': 'PCHAPULTEPEC', 'Nombre': 'Planta Chapultepec, Cd. de Méx. SACM*', 'Latitud': '19.423889', 'Longitud': '-99.201944'}
+{'Estacion': 'DELVALLE', 'Nombre': 'Del Valle, Cd. de Méx. SACM*', 'Latitud': '19.378333', 'Longitud': '-99.162778'}
+{'Estacion': 'EAZTECA', 'Nombre': 'Estadio Azteca, Cd. de Méx. SACM*', 'Latitud': '19.300278', 'Longitud': '-99.151944'}        
+{'Estacion': 'ELMORALDF', 'Nombre': 'Lumbrera 3 Ríos (El Moral), Cd. de Méx. SACM*', 'Latitud': '19.377778', 'Longitud': '-99.066667'}
+{'Estacion': 'TARANGO', 'Nombre': 'Tarango, Cd. de Méx. SACM*', 'Latitud': '19.360833', 'Longitud': '-99.2125'}
+{'Estacion': 'PAMEZONTEPEC', 'Nombre': 'P. A. Mezontepec, Cd. de Méx. SACM*', 'Latitud': '19.234444', 'Longitud': '-99.193611'} 
+{'Estacion': 'ENP1', 'Nombre': 'Escuela Nacional Preparatoria 1, Cd. de Méx. UNAM*', 'Latitud': '19.269722', 'Longitud': '-99.12'}
+{'Estacion': 'ENP2', 'Nombre': 'Escuela Nacional Preparatoria 2, Cd. de Méx. UNAM*', 'Latitud': '19.39', 'Longitud': '-99.099722'}
+{'Estacion': 'ENP3', 'Nombre': 'Escuela Nacional Preparatoria 3, Cd. de Méx. UNAM*', 'Latitud': '19.48', 'Longitud': '-99.09'}  
+{'Estacion': 'ENP4', 'Nombre': 'Escuela Nacional Preparatoria 4, Cd. de Méx. UNAM*', 'Latitud': '19.403611', 'Longitud': '-99.196111'}
+{'Estacion': 'ENP5', 'Nombre': 'Escuela Nacional Preparatoria 5, Cd. de Méx. UNAM*', 'Latitud': '19.3', 'Longitud': '-99.13'}   
+{'Estacion': 'ENP6', 'Nombre': 'Escuela Nacional Preparatoria 6, Cd. de Méx. UNAM*', 'Latitud': '19.35', 'Longitud': '-99.159722'}
+{'Estacion': 'ENP7', 'Nombre': 'Escuela Nacional Preparatoria 7, Cd. de Méx. UNAM*', 'Latitud': '19.42', 'Longitud': '-99.129722'}
+{'Estacion': 'ENP8', 'Nombre': 'Escuela Nacional Preparatoria 8, Cd. de Méx. UNAM*', 'Latitud': '19.37', 'Longitud': '-99.189722'}
+{'Estacion': 'ENP9', 'Nombre': 'Escuela Nacional Preparatoria 9, Cd. de Méx. UNAM*', 'Latitud': '19.48', 'Longitud': '-99.12'}  
+{'Estacion': 'LU4DF', 'Nombre': 'Lumbrera Cutaro Ríos, Cd. de Méx.', 'Latitud': '0', 'Longitud': '0'}
+{'Estacion': 'ANZDF', 'Nombre': 'Anzaldo, Cd. de Méx.', 'Latitud': '19.320833', 'Longitud': '-99.22'}
+{'Estacion': 'BECDF', 'Nombre': 'Becerra C, Cd. de Méx.', 'Latitud': '19.383889', 'Longitud': '-99.219722'}
+{'Estacion': 'MIXDF', 'Nombre': 'Mixcoac, Cd. de Méx.', 'Latitud': '19.363611', 'Longitud': '-99.233611'}
+{'Estacion': 'TACDF', 'Nombre': 'Tacubaya, Cd. de Méx.', 'Latitud': '19.394167', 'Longitud': '-99.213333'}
+{'Estacion': 'TARDF', 'Nombre': 'Tarango, Cd. de Méx.', 'Latitud': '19.360556', 'Longitud': '-99.212778'}
+{'Estacion': 'TEXDF', 'Nombre': 'Texcalatlaco, Cd. de Méx.', 'Latitud': '19.331944', 'Longitud': '-99.226667'}
+{'Estacion': 'BARDF', 'Nombre': 'Barrilaco, Cd. de Méx.', 'Latitud': '19.418889', 'Longitud': '-99.22'}
+{'Estacion': 'DOLDF', 'Nombre': 'Dolores, Cd. de Méx.', 'Latitud': '19.416111', 'Longitud': '-99.207778'}
+{'Estacion': 'CONAGUAOFC', 'Nombre': 'Conagua Oficinas Centrales, Cd. de Mex. SGT*', 'Latitud': '19.3375', 'Longitud': '-99.19'}
+{'Estacion': 'MDELREY', 'Nombre': 'Molino del Rey, Cd. de Mex. SMN*', 'Latitud': '19.416389', 'Longitud': '-99.191944'}
+{'Estacion': 'CCA', 'Nombre': 'Centro de Ciencias de la Atmosfera, Cd. de Mex. UNAM*', 'Latitud': '19.326111', 'Longitud': '-99.176111'}
+{'Estacion': 'CENAPRED', 'Nombre': 'CCA CENAPRED, Cd. de Mex. SMN*', 'Latitud': '19.311667', 'Longitud': '-99.196111'}
+{'Estacion': 'AJUSCODF', 'Nombre': 'Ajusco, Cd. de Méx. SACMEX*', 'Latitud': '19.218611', 'Longitud': '-99.210278'}
+{'Estacion': 'MILPAALTADF', 'Nombre': 'Milpa Alta, Cd. de Méx. SACMEX*', 'Latitud': '19.187222', 'Longitud': '-99.026944'}      
+{'Estacion': 'TOPILEJODF', 'Nombre': 'Topilejo, Cd. de Méx. SACMEX*', 'Latitud': '19.199444', 'Longitud': '-99.135833'}

@@ -1,16 +1,26 @@
 from keras.models import Sequential
 from keras.layers import Dense
+from keras import metrics
 import tensorflow as tf
 import csv
 import datetime
+import sys
 
 
-FILE_X_TRAIN = "./ml/files/x_train.csv"
-FILE_X_TEST = "./ml/files/x_test.csv"
-FILE_Y_TRAIN = "./ml/files/y_train.csv"
-FILE_Y_TEST = "./ml/files/y_test.csv"
-FILE_MODEL = "./ml/files/model.h5"
+FILE_X_TRAIN = "./ml/files/x_train_"
+FILE_X_TEST = "./ml/files/x_test_"
+FILE_Y_TRAIN = "./ml/files/y_train_"
+FILE_Y_TEST = "./ml/files/y_test_"
+FILE_MODEL = "./ml/files/model_"
 LOGS_FOLDER = "./ml/logs/fit/"
+
+colonia = sys.argv[1]
+print("Se procesará para la colona: " + colonia)
+FILE_X_TRAIN += colonia + ".csv"
+FILE_X_TEST += colonia + ".csv"
+FILE_Y_TRAIN += colonia + ".csv"
+FILE_Y_TEST += colonia + ".csv"
+FILE_MODEL += colonia + ".h5"
 
 with open(FILE_X_TRAIN, 'r', newline='') as f_x_train:
     reader = csv.reader(f_x_train)
@@ -18,7 +28,7 @@ with open(FILE_X_TRAIN, 'r', newline='') as f_x_train:
     x_train = []
     for r in reader:
         # "Mes", "Precipitacion","Temp Min", "Temp Max"
-        x_train.append([int(r[0]), float(r[1]),
+        x_train.append([int(round(float(r[0]))), float(r[1]),
                         float(r[2]), float(r[3])])
     print(len(x_train))
 
@@ -28,7 +38,7 @@ with open(FILE_X_TEST, 'r', newline='') as f_x_test:
     x_test = []
     for r in reader:
         # "Mes", "Precipitacion","Temp Min", "Temp Max"
-        x_test.append([int(r[0]), float(r[1]),
+        x_test.append([int(round(float(r[0]))), float(r[1]),
                        float(r[2]), float(r[3])])
     print(len(x_test))
 
@@ -57,15 +67,19 @@ model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.summary()
 # compile the keras model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])  # noqa
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', metrics.TruePositives(), metrics.TrueNegatives(),
+                    metrics.FalsePositives(), metrics.FalseNegatives(), metrics.Recall(), metrics.Precision()])  # noqa
 
 log_dir = LOGS_FOLDER + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
 # fit the keras model on the dataset
-model.fit(x_train, y_train, epochs=150, batch_size=10, callbacks=[tensorboard_callback])
+model.fit(x_train, y_train, epochs=10000, batch_size=10, callbacks=[tensorboard_callback])
 # evaluate the keras model
 result = model.evaluate(x_test, y_test)
+[loss, accuracy, truePositives, trueNegatives, falsePositives, falseNegatives, recall, precision] = result
+h1 = 2 * (recall * precision) / (recall + precision)
+model.save(FILE_MODEL)
 print(model.metrics_names)
 print(result)
-model.save(FILE_MODEL)
+print("H1: " + str(h1))

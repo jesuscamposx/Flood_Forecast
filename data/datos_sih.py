@@ -11,15 +11,20 @@ def daterange(start_date, end_date):
         yield start_date + timedelta(n)
 
 
-o = open("C:/Users/ANGLOBAL/python-workspace/Flood_Forecast/data/SJADF.txt", "w+")
-o.write("ESTACION  : SJADF\n")
-o.write("NOMBRE    : San Juan de Aragón, Cd. de Méx.\n")
+#o = open("C:/Users/ANGLOBAL/python-workspace/Flood_Forecast/data/SJADF.txt", "w+")
+#o.write("ESTACION  : SJADF\n")
+#o.write("NOMBRE    : San Juan de Aragón, Cd. de Méx.\n")
+o = open("./data/files/CEADF.txt", "w+")
+o.write("ESTACION  : CEADF\n")
+o.write("NOMBRE    : Campamento Amealco, Cd. de Méx.\n")
 o.write("ESTADO    : DISTRITO FEDERAL\n")
 o.write("MUNICIPIO : GUSTAVO A. MADERO\n")
 o.write("SITUACION : OPERANDO\n")
 o.write("ORGANISMO : CONAGUA-SIH\n")
-o.write("LATITUD   : 19.466667\n")
-o.write("LONGITUD  : -99.066667\n\n")
+o.write("LATITUD   : 19.516667\n")
+o.write("LONGITUD  : -99.1375\n\n")
+#o.write("LATITUD   : 19.466667\n")
+#o.write("LONGITUD  : -99.066667\n\n")
 o.write("           PRECIP   TMAX   TMIN\n")
 o.write("FECHA      (MM)     (°C)  (°C)\n")
 
@@ -29,7 +34,7 @@ session.verify = False
 transport = Transport(session=session)
 
 client = Client(wsdl, transport=transport)
-start_date = date(2017, 1, 2)
+start_date = date(2010, 1, 2)
 end_date = date(2020, 7, 2)
 dr = daterange(start_date, end_date)
 
@@ -46,12 +51,14 @@ for single_date in dr:
     precipitaciones = json.loads(res_precip)
 
     for temperatura in temperaturas:
-        if temperatura["Estacion"] == "SJADF":
+        #if temperatura["Estacion"] == "SJADF":
+        if temperatura["Estacion"] == "CEADF":
             tmin = temperatura["tmin"]
             tmax = temperatura["tmax"]
 
     for precipitacion in precipitaciones:
-        if precipitacion["Estacion"] == "SJADF":
+        #if precipitacion["Estacion"] == "SJADF":
+        if precipitacion["Estacion"] == "CEADF":
             precip = precipitacion["Prec"]
 
     fecha = (single_date + timedelta(days=-1)).strftime("%Y/%m/%d")

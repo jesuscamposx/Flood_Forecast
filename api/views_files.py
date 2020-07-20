@@ -24,13 +24,13 @@ class ArchivoInundacionView(APIView):
         f_name = "Fflood_Registros_Inundacion" + years.replace('-', '_') + ".csv"
         with open(ub + f_name, 'w+', newline='') as f:
             w = csv.writer(f)
-            w.writerow(["Fecha", "Alcaldía", "Precipitación", "Temperatura Mínima",
+            w.writerow(["Fecha", "Colonia", "Precipitación", "Temperatura Mínima",
                        "Temperatura Máxima", "Inundación",
                        "Creación", "Actualización"])
             q = "SELECT * FROM condicion WHERE YEAR(fecha) in (" + years.replace("-", ", ") + ")"
             print(q)
             for c in Condicion.objects.raw(q):
-                w.writerow([c.fecha, c.id_alcaldia, c.precipitacion,
+                w.writerow([c.fecha, c.id_colonia, c.precipitacion,
                             c.temp_min, c.temp_max, c.inundacion,
                             c.creado, c.actualizado])
         csv_file = open(ub + f_name, 'rb')
@@ -52,8 +52,8 @@ class ArchivoNivelView(APIView):
             w.writerow(["Fecha Hora", "Sensor", "Latitud", "Longitud", "Nivel Agua[cm]"])
             q = "SELECT * FROM medicion WHERE YEAR(creado) in (" + years.replace("-", ", ") + ")"
             for m in Medicion.objects.raw(q):
-                w.writerow([m.creado, m.sensor.id_sensor, m.sensor.latitud, 
-                            m.sensor.longitud, m.nivel_agua])
+                w.writerow([m.creado, m.id_sensor.id_sensor, m.id_sensor.latitud, 
+                            m.id_sensor.longitud, m.nivel_agua])
         csv_file = open(ub + f_name, 'rb')
         response = HttpResponse(FileWrapper(csv_file), content_type='text/csv')
         response['Content-Disposition'] = 'attachment; filename="%s"' % f_name

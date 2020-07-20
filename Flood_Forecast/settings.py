@@ -156,3 +156,10 @@ logging.config.dictConfig({
 
 # URLs
 CLIMA_URL = "https://api.openweathermap.org/data/2.5/onecall?exclude=hourly&appid=676a4c6b1e5e860cdfa7b5d19b4bc85d"
+
+
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'fflood.alerts@gmail.com'
+EMAIL_HOST_PASSWORD = 'Fflood11+'
+EMAIL_USE_TLS = True

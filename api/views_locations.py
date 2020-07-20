@@ -12,7 +12,7 @@ class CalleView(APIView):
         if id_colonia is None:
             return Response({"id": 40001, "text": "Colonia es necesario."},
                             status=status.HTTP_400_BAD_REQUEST)
-        calles = Calle.objects.all().filter(id_colonia=id_colonia)
+        calles = Calle.objects.all().filter(colonia=id_colonia)
         serializer = CalleSerializer(calles, many=True)
         return Response(serializer.data)
 

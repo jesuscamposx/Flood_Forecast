@@ -1,5 +1,5 @@
 import json
-f = open('C:/Users/ANGLOBAL/python-workspace/Flood_Forecast/data/EstacionesSIH.json', 'rb')
+f = open('./data/files/EstacionesSIH.json', 'rb')
 data = json.load(f)
 
 for d in data:

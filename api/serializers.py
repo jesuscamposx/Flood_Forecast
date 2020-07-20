@@ -12,20 +12,20 @@ class AlcaldiaSerializer(serializers.ModelSerializer):
 class ColoniaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Colonia
-        fields = ['id_colonia', 'nombre', 'codigo_postal', 'latitud',
+        fields = ['id_colonia', 'nombre', 'latitud',
                   'longitud', 'id_alcaldia']
 
 
 class CalleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Calle
-        fields = ['id_calle', 'nombre', 'latitud', 'longitud', 'id_colonia']
+        fields = ['id_calle', 'nombre', 'latitud', 'longitud', 'intensidad', 'id_maps', 'colonia']  # noqa
 
 
 class CondicionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Condicion
-        fields = ['fecha', 'id_alcaldia', 'precipitacion', 'temp_min',
+        fields = ['id_condicion', 'fecha', 'id_colonia', 'precipitacion', 'temp_min',
                   'temp_max', 'inundacion', 'creado', 'actualizado']
 
 
@@ -37,10 +37,10 @@ class SensorSerializer(serializers.ModelSerializer):
 
 
 class MedicionSerializer(serializers.ModelSerializer):
-    sensor = SensorSerializer(read_only=True)
+    id_sensor = SensorSerializer(read_only=True)
     class Meta:
         model = Medicion
-        fields = ['id_medicion', 'creado', 'nivel_agua', 'sensor']
+        fields = ['id_medicion', 'creado', 'nivel_agua', 'id_sensor']
 
 
 class DestinatarioSerializer(serializers.ModelSerializer):
