@@ -7,5 +7,5 @@ class ApiConfig(AppConfig):
     def ready(self):
         from api import scheduler
         scheduler.start()
-        from api import scheduler_sensor
-        scheduler_sensor.start()
+        #from api import scheduler_sensor
+        #scheduler_sensor.start()

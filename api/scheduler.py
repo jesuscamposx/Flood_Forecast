@@ -11,7 +11,7 @@ URL = 'http://localhost:8000/api/ml/prediccion'
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(send_user_mail, 'cron', hour=0, minute=40, second=0)
+    scheduler.add_job(send_user_mail, 'cron', hour=19, minute=0, second=0)
     scheduler.start()
 
 def send_user_mail():

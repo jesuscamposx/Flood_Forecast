@@ -37,10 +37,16 @@ with open(FILE_Y_TEST, 'r', newline='') as f_y_test:
     print(len(y_test))
 
 model = load_model(FILE_MODEL)
-
-i = 0
-for x in x_test:
-    if y_test[i] == 1:  
-        pred = model.predict([x])
-        print("X: " + str(x) + " Y: " + str(y_test[i]) + " Pred: " + str(pred[0][0]))
-    i += 1
+# Evaluar modelo
+result = model.evaluate(x_test, y_test)
+[loss, accuracy, truePositives, trueNegatives, falsePositives, falseNegatives, recall, precision] = result
+h1 = 2 * (recall * precision) / (recall + precision)
+print(model.metrics_names)
+print(result)
+print("H1: " + str(h1))
+#i = 0
+#for x in x_test:
+#    if y_test[i] == 1:  
+#        pred = model.predict([x])
+#        print("X: " + str(x) + " Y: " + str(y_test[i]) + " Pred: " + str(pred[0][0]))
+#    i += 1

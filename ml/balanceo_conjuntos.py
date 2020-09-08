@@ -45,18 +45,21 @@ with open(FILE_Y, 'r', newline='') as f_y:
         y.append(int(r[0]))
     print(len(y))
 
-# define pipeline
+# Definicion del pipeline 
 over = SMOTE(sampling_strategy=0.1)
 under = RandomUnderSampler(sampling_strategy=0.5)
 steps = [('o', over), ('u', under)]
 pipeline = Pipeline(steps=steps)
-# transform the dataset
+# Aplicar el pipeline
 x, y = pipeline.fit_resample(x, y)
+
 # summarize the new class distribution
 counter = Counter(y)
 print(counter)
-# create train and test datasets
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state = 1)
+
+# Creacion de los conjuntos de entrenamiento y prueba
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=1)
+
 with open(FILE_X_TRAIN, 'w', newline='') as f_x_tr:
             w_x_tr = csv.writer(f_x_tr)
             w_x_tr.writerow(["Mes", "Precipitacion","Temp Min", "Temp Max"])

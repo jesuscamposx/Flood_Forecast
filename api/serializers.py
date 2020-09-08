@@ -37,7 +37,7 @@ class SensorSerializer(serializers.ModelSerializer):
 
 
 class MedicionSerializer(serializers.ModelSerializer):
-    id_sensor = SensorSerializer(read_only=True)
+    #id_sensor = SensorSerializer(read_only=True)
     class Meta:
         model = Medicion
         fields = ['id_medicion', 'creado', 'nivel_agua', 'id_sensor']

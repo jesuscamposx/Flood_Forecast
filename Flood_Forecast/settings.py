@@ -27,7 +27,7 @@ SECRET_KEY = '!!j8z-=a3cn&6u-t9$!7v%1+4=iote&lv+ds6wf5!t^z)u=8@p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost', 'django-env.eba-cmb242qh.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -40,10 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,9 +83,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'fflood_db',
-        'USER': 'flooddba',
+        'USER': 'flood_dba',
         'PASSWORD': 'Fl00d38+',
-        'HOST': 'localhost',
+        'HOST': 'fflood-db.criepx9a3tqj.us-west-1.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
@@ -113,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
@@ -152,6 +154,8 @@ logging.config.dictConfig({
         }
     }
 })
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # URLs

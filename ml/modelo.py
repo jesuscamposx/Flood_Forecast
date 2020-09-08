@@ -60,21 +60,23 @@ with open(FILE_Y_TEST, 'r', newline='') as f_y_test:
         y_test.append(int(r[0]))
     print(len(y_test))
 
-# define the keras model
+# Definición del modelo
 model = Sequential()
 model.add(Dense(12, input_dim=4, activation='relu'))
 model.add(Dense(8, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))
 model.summary()
-# compile the keras model
-model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', metrics.TruePositives(), metrics.TrueNegatives(),
-                    metrics.FalsePositives(), metrics.FalseNegatives(), metrics.Recall(), metrics.Precision()])  # noqa
+# Compilar el modelo
+model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy', metrics.TruePositives(),
+              metrics.TrueNegatives(), metrics.FalsePositives(), metrics.FalseNegatives(),
+              metrics.Recall(), metrics.Precision()])  # noqa
 
 log_dir = LOGS_FOLDER + datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir, histogram_freq=1)
 
-# fit the keras model on the dataset
-model.fit(x_train, y_train, epochs=10000, batch_size=10, callbacks=[tensorboard_callback])
+# Entrenar el model
+model.fit(x_train, y_train, epochs=5000, batch_size=10, callbacks=[tensorboard_callback])
+
 # evaluate the keras model
 result = model.evaluate(x_test, y_test)
 [loss, accuracy, truePositives, trueNegatives, falsePositives, falseNegatives, recall, precision] = result
