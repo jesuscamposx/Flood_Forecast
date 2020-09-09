@@ -27,7 +27,7 @@ SECRET_KEY = '!!j8z-=a3cn&6u-t9$!7v%1+4=iote&lv+ds6wf5!t^z)u=8@p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'fflood-env.eba-cmb242qh.us-west-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['localhost', 'fflood-env.eba-72qxynva.us-west-1.elasticbeanstalk.com']
 
 
 # Application definition
