@@ -9,6 +9,10 @@ from rest_framework import status
 from datetime import datetime
 import logging
 import csv
+import os
+
+if not os.path.exists('./files'):
+    os.makedirs('./files')
 
 
 logger = logging.getLogger(__name__)
