@@ -34,7 +34,7 @@ class ArchivoInundacionView(APIView):
             q = "SELECT * FROM condicion WHERE YEAR(fecha) in (" + years.replace("-", ", ") + ")"
             print(q)
             for c in Condicion.objects.raw(q):
-                w.writerow([c.fecha, c.id_colonia, c.precipitacion,
+                w.writerow([c.fecha, c.id_colonia.nombre, c.precipitacion,
                             c.temp_min, c.temp_max, c.inundacion,
                             c.creado, c.actualizado])
         csv_file = open(ub + f_name, 'rb')
