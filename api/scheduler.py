@@ -5,13 +5,15 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 import requests
+import logging
 
+logger = logging.getLogger(__name__)
 
 URL = 'http://fflood-env.eba-72qxynva.us-west-1.elasticbeanstalk.com/api/ml/prediccion'
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(send_user_mail, 'cron', hour=2, minute=27, second=0)
+    scheduler.add_job(send_user_mail, 'cron', hour=2, minute=42, second=0)
     scheduler.start()
 
 def send_user_mail():
@@ -25,6 +27,7 @@ def send_user_mail():
             print(result.json())
             result = result.json()
             p += createMessage(c, result['value'])
+            logger.info(p)
         users = Destinatario.objects.all()
         for u in users:
             b = createBody(u.nombre, hoy_s, p)
@@ -34,8 +37,9 @@ def send_user_mail():
                                     settings.EMAIL_HOST_USER, #Remitente
                                     [u.email]) #Destinatario
             message.send()
+            logger.info('Alert succesfully sent to: ' + u.nombre)
     except Exception as e:
-        print(str(e))
+        logger.error(str(e))
 
 def createMessage(colonia, prediccion):
     msg = 'Para la colonia ' + str(colonia.nombre)
