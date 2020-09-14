@@ -13,7 +13,7 @@ URL = 'http://fflood-env.eba-72qxynva.us-west-1.elasticbeanstalk.com/api/ml/pred
 
 def start():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(send_user_mail, 'cron', hour=2, minute=42, second=0)
+    scheduler.add_job(send_user_mail, 'cron', hour=2, minute=50, second=0)
     scheduler.start()
 
 def send_user_mail():
